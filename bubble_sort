@@ -1,0 +1,16 @@
+<?php
+
+$my_array = [64, 34, 25, 12, 22, 11, 90, 5];
+
+$n = count($my_array);
+for ($i = 0; $i < $n; $i++) {
+    for ($j = 0; $j < $n; $j++) {
+        if($my_array[$i]>$my_array[$j])
+        {
+            $temp = $my_array[$i];
+            $my_array[$i]= $my_array[$j];
+            $my_array[$j] = $temp;
+            echo sprintf("[%d,%d]" . PHP_EOL, $my_array[$i], $my_array[$j]);
+        }
+    }
+}
